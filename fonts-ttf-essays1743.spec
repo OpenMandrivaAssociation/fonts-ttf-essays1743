@@ -9,6 +9,7 @@ Source2:	StayPuft.ttf.tar.gz
 License:	GPL/LGPL
 Group:		System/Fonts/True type
 URL:		http://www.thibault.org/fonts/
+BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
 BuildRequires:	fontconfig
 BuildRequires:	freetype-tools
