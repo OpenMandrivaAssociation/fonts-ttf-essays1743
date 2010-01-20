@@ -1,7 +1,7 @@
 Summary:	A small collection of Truetype fonts
 Name:		fonts-ttf-essays1743
 Version:	1.0
-Release:	%mkrel 6
+Release:	%mkrel 7
 
 Source0:	Essays1743-1.0-ttf.tar.gz
 Source1:	Isabella.ttf.tar.gz
@@ -13,8 +13,6 @@ BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildArch:	noarch
 BuildRequires:	fontconfig
 BuildRequires:	freetype-tools
-Requires(post): fontconfig
-Requires(postun): fontconfig
 
 
 %description 
@@ -56,14 +54,6 @@ cp Essays1743/README Essays1743/Essays1743.README.txt
 mkdir -p %{buildroot}%_sysconfdir/X11/fontpath.d/
 ln -s ../../..%_datadir/fonts/ttf/essays1743 \
     %{buildroot}%_sysconfdir/X11/fontpath.d/ttf-essays:pri=50
-
-%post
-[ -x %_bindir/fc-cache ] && %{_bindir}/fc-cache 
-
-%postun
-if [ "$1" = "0" ]; then
-        [ -x %_bindir/fc-cache ] && %{_bindir}/fc-cache 
-fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
