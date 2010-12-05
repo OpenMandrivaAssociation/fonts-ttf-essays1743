@@ -1,7 +1,7 @@
 Summary:	A small collection of Truetype fonts
 Name:		fonts-ttf-essays1743
 Version:	1.0
-Release:	%mkrel 7
+Release:	%mkrel 8
 
 Source0:	Essays1743-1.0-ttf.tar.gz
 Source1:	Isabella.ttf.tar.gz
