@@ -66,3 +66,44 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_datadir}/fonts/ttf/essays1743/fonts.scale
 %{_datadir}/fonts/ttf/essays1743/*.ttf
 %{_sysconfdir}/X11/fontpath.d/ttf-essays:pri=50
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 1.0-9mdv2011.0
++ Revision: 675534
++ rebuild (emptylog)
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.0-8mdv2011.0
++ Revision: 610728
+- rebuild
+
+* Wed Jan 20 2010 Paulo Ricardo Zanoni <pzanoni@mandriva.com> 1.0-7mdv2010.1
++ Revision: 494138
+- fc-cache is now called by an rpm filetrigger
+
+* Thu Sep 03 2009 Thierry Vignaud <tv@mandriva.org> 1.0-6mdv2010.0
++ Revision: 428842
+- rebuild
+
+* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 1.0-5mdv2009.0
++ Revision: 240718
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Fri Jul 06 2007 Ademar de Souza Reis Jr <ademar@mandriva.com.br> 1.0-3mdv2008.0
++ Revision: 49187
+- fontpath.d conversion (#31756)
+- moving fonts to standard directory (/usr/share/fonts/ttf/)
+- Import fonts-ttf-essays1743
+
+
+
+* Wed Feb 08 2006 Frederic Crozat <fcrozat@mandriva.com> 1.0-2mdk
+- Don't package fontconfig cache file
+- Fix prereq
+
+* Thu Apr 28 2005 Marcel Pol <mpol@mandriva.org> 1.0-1mdk
+- initial mandriva rpm
